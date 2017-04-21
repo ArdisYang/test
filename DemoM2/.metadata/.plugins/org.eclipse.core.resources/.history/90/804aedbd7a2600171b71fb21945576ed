@@ -1,0 +1,10 @@
+package com.table.Personnel;
+
+public class PositionType {
+
+	private int id;
+	private String position;
+	private int personnelId;
+	
+	
+}

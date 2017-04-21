@@ -1,0 +1,12 @@
+package com.table.Personnel;
+
+public class PositionType {
+/*職位薪水參數*/
+	private int id;
+	private String position;
+	private int personnelId;
+	private int hourlySalary;
+	private int monthlySalary;
+	private String note;// 備註
+	
+}

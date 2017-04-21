@@ -2,17 +2,17 @@ package com.main;
 
 import java.util.ArrayList;
 
-import com.table.Account.Account;
-import com.table.Account.AccountDAO;
+import com.table.Personnel.Personnel;
+import com.table.Personnel.PersonnelDAO;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		AccountDAO accountDao = new AccountDAO();
+		PersonnelDAO accountDao = new PersonnelDAO();
 
 		 for (int i = 1; i < 9; i++) {
-		 Account account = new Account();
+		 Personnel account = new Personnel();
 		 account.setName("TONY0" + i);
 		 System.out.println("**********");
 		 System.out.println(account.getId());

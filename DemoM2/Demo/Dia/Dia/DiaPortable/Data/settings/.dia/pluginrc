@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <plugin filename="&lt;builtin&gt;">
+    <name>Internal</name>
+    <description>dia 內部物件及過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\xslt.dll">
+    <name>XSLT</name>
+    <description>XSL 轉換過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\xfig.dll">
+    <name>FIG</name>
+    <description>Fig 格式匯入/匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\wpg.dll">
+    <name>WPG</name>
+    <description>WordPerfect 圖形匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\wmf.dll">
+    <name>WMF</name>
+    <description>WMF 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\vdx.dll">
+    <name>VDX</name>
+    <description>Visio XML 格式匯入/匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\uml.dll">
+    <name>UML</name>
+    <description>「統一模型語言」(UML) 圖表物件 1.3</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\svg.dll">
+    <name>SVG</name>
+    <description>可縮放向量圖 (SVG) 匯入/匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\standard.dll">
+    <name>Standard</name>
+    <description>標準物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\shape.dll">
+    <name>shape</name>
+    <description>dia shape export filter</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\sadt.dll">
+    <name>SADT</name>
+    <description>SADT 圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\pstricks.dll">
+    <name>Pstricks</name>
+    <description>TeX Pstricks 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\postscript.dll">
+    <name>Postscript</name>
+    <description>Postscript Rendering</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\pixbuf.dll">
+    <name>Pixbuf</name>
+    <description>gdk-pixbuf based bitmap export/import</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\pgf.dll">
+    <name>PGF</name>
+    <description>LaTeX PGF 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\network.dll">
+    <name>Network</name>
+    <description>網路圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\misc.dll">
+    <name>Misc</name>
+    <description>其它物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\metapost.dll">
+    <name>Metapost</name>
+    <description>TeX Metapost 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\libart.dll">
+    <name>Libart</name>
+    <description>Libart based rendering</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\Kaos.dll">
+    <name>KAOS</name>
+    <description>KAOS 圖表</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\Jackson.dll">
+    <name>Jackson</name>
+    <description>Jackson 圖表</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\Istar.dll">
+    <name>Istar</name>
+    <description>Istar 圖表</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\hpgl.dll">
+    <name>HPGL</name>
+    <description>HP 圖形語言 (HP-GL) 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\grafcet.dll">
+    <name>GRAFCET</name>
+    <description>GRAFCET 圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\fs.dll">
+    <name>FS</name>
+    <description>「功能結構」圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\flowchart.dll">
+    <name>Flowchart</name>
+    <description>流程圖物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\er.dll">
+    <name>ER</name>
+    <description>「實體/關係」圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\dxf.dll">
+    <name>DXF</name>
+    <description>繪圖交換檔 (DIF) 匯入/匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\Database.dll">
+    <name>ERT</name>
+    <description>Entity/Relationship table diagram objects</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\custom_lines.dll">
+    <name>CustomLines</name>
+    <description>Custom XML lines loader</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\custom.dll">
+    <name>自選</name>
+    <description>自選 XML 圖形載入程序</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\chronogram.dll">
+    <name>Chronogram</name>
+    <description>「年代表」圖表物件</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\cgm.dll">
+    <name>CGM</name>
+    <description>電腦圖像中介檔 (CGM) 匯出過濾器</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\cairo.dll">
+    <name>Cairo</name>
+    <description>基於 Cairo 的著色</description>
+  </plugin>
+  <plugin filename="C:\Ardis\Dia\DiaPortable\App\Dia\dia\aadl.dll">
+    <name>AADL</name>
+    <description>「架構分析及設計語言」圖表物件</description>
+  </plugin>
+</plugins>
