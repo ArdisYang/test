@@ -1,0 +1,8 @@
+package com.table.order;
+
+public class Order {
+
+	public int id ;
+	public int order;
+	public int clientId
+}

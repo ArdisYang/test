@@ -1,0 +1,7 @@
+package com.table.order;
+
+import com.Hibernate.HibernateUtil;
+
+public class OrderDAO extends HibernateUtil<Order>{
+
+}

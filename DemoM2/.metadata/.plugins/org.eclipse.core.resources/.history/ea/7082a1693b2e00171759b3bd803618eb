@@ -1,0 +1,12 @@
+package com.table.order;
+
+import java.sql.Date;
+
+public class Order {
+
+	public int id ;
+	public int clientId;//客戶編號
+	public int orderContentId; //訂單內容編號
+	private Date createDate;// 創建時間
+	
+}

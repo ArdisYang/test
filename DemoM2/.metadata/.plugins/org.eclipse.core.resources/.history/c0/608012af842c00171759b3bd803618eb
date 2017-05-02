@@ -1,0 +1,27 @@
+package com.table.Personnel;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
+import com.Hibernate.HibernateUtil;
+
+public class PersonnelDAO extends HibernateUtil<Personnel> {
+	
+	
+	public boolean login(String account, String password) {
+		Session sess = null;
+		Object returnObject = null;
+		boolean login =false;
+		try {
+			sess = HibernateUtil.getSessionFactory().openSession();
+			returnObject = sess.get(Personnel.class, account, password);
+		} catch (HibernateException e) {
+			throw new RuntimeException(e);
+		} finally {
+			HibernateUtil.shutdown();
+		}
+		return login;
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.table.OrderContent;
+
+public class OrderContentDAO {
+
+}

@@ -1,0 +1,13 @@
+package com.table.PositionType.PositionType;
+
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
+import com.Hibernate.HibernateUtil;
+
+public class PositionTypeDAO extends HibernateUtil<PositionType>{
+
+	
+}

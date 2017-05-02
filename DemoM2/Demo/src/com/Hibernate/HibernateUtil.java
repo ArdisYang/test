@@ -15,6 +15,8 @@ public class HibernateUtil<T> {
 	private static SessionFactory sessionFactory;
 	static {
 		sessionFactory = new Configuration().configure().buildSessionFactory();
+		// sessionFactory =new
+		// Configuration().configure("Hibernate.cfg.xml").buildSessionFactory();
 	}
 
 	public static SessionFactory getSessionFactory() {
@@ -25,7 +27,8 @@ public class HibernateUtil<T> {
 		getSessionFactory().close();
 	}
 
-	public void save(Object entity) {
+	public boolean save(Object entity) {
+		boolean result = false;
 		Session sess = null;
 		Transaction tx = null;
 		try {
@@ -33,17 +36,20 @@ public class HibernateUtil<T> {
 			tx = sess.beginTransaction();
 			sess.save(entity);
 			tx.commit();
+			result = true;
 		} catch (HibernateException e) {
-			if(tx != null) { 
+			if (tx != null) {
 				tx.rollback();
 			}
 			throw new RuntimeException(e);
 		} finally {
 			sess.close();
 		}
+		return result;
 	}
 
-	public void update(Object entity) {
+	public boolean update(Object entity) {
+		boolean result = false;
 		Session sess = null;
 		Transaction tx = null;
 		try {
@@ -51,14 +57,20 @@ public class HibernateUtil<T> {
 			tx = sess.beginTransaction();
 			sess.update(entity);
 			tx.commit();
+			result = true;
 		} catch (HibernateException e) {
+			if (tx != null) {
+				tx.rollback();
+			}
 			throw new RuntimeException(e);
 		} finally {
-			HibernateUtil.shutdown();
+			sess.close();
 		}
+		return result;
 	}
 
-	public void delete(Object entity) {
+	public boolean delete(Object entity) {
+		boolean result = false;
 		Session sess = null;
 		Transaction tx = null;
 		try {
@@ -66,11 +78,16 @@ public class HibernateUtil<T> {
 			tx = sess.beginTransaction();
 			sess.delete(entity);
 			tx.commit();
+			result = true;
 		} catch (HibernateException e) {
+			if (tx != null) {
+				tx.rollback();
+			}
 			e.printStackTrace();
 		} finally {
-			HibernateUtil.shutdown();
+			sess.close();
 		}
+		return result;
 	}
 
 	public List<T> select(Object object) {
@@ -81,12 +98,12 @@ public class HibernateUtil<T> {
 			Criteria criteria = sess.createCriteria(object.getClass());
 			Iterator iterator = criteria.list().iterator();
 			while (iterator.hasNext()) {
-				arraylist.add((T)iterator.next());
+				arraylist.add((T) iterator.next());
 			}
 		} catch (HibernateException e) {
 			throw new RuntimeException(e);
 		} finally {
-			HibernateUtil.shutdown();
+			sess.close();
 		}
 		return arraylist;
 	}
@@ -100,12 +117,13 @@ public class HibernateUtil<T> {
 		} catch (HibernateException e) {
 			throw new RuntimeException(e);
 		} finally {
-			HibernateUtil.shutdown();
+			sess.close();
 		}
 		return returnObject;
 	}
 
-	public void saveOrUpdate(Object entity) {
+	public boolean saveOrUpdate(Object entity) {
+		boolean result = false;
 		Session sess = null;
 		Transaction tx = null;
 		try {
@@ -113,11 +131,16 @@ public class HibernateUtil<T> {
 			tx = sess.beginTransaction();
 			sess.saveOrUpdate(entity);
 			tx.commit();
+			result = true;
 		} catch (HibernateException e) {
+			if (tx != null) {
+				tx.rollback();
+			}
 			throw new RuntimeException(e);
 		} finally {
-			HibernateUtil.shutdown();
+			sess.close();
 		}
+		return result;
 	}
 
 }

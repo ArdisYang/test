@@ -1,7 +1,64 @@
 package com.table.Personnel;
 
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
 import com.Hibernate.HibernateUtil;
 
 public class PersonnelDAO extends HibernateUtil<Personnel> {
+
+	public boolean login(String account, String password) {
+		Session session = null;
+		boolean login = false;
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			session.get("account", account);
+			session.get("password", password);
+			List<?> list = session.createQuery("from Personnel").list();
+			if (!list.isEmpty() && list.size() == 1) {
+				login = true;
+			}
+		} catch (HibernateException e) {
+			throw new RuntimeException(e);
+		} finally {
+			session.clear();
+		}
+		return login;
+	}
+
+	public List<?> selectByid(int id) {
+		Session session = null;
+		List<?> list;
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			list = session.createSQLQuery(
+					"select * from Personnel p join PositionType pt on p.PositionTypeid =pt.id where p.id=" + id)
+					.list();
+
+		} catch (HibernateException e) {
+			throw new RuntimeException(e);
+		} finally {
+			session.clear();
+		}
+		return list;
+	}
 	
+	public List<?> selectAll() {
+		Session session = null;
+		List<?> list = null;
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			list = session.createSQLQuery(
+					"select * from Personnel p join PositionType pt on p.PositionTypeid =pt.id" )
+					.list();
+
+		} catch (HibernateException e) {
+			throw new RuntimeException(e);
+		} finally {
+			session.clear();
+		}
+		return list;
+	}
 }

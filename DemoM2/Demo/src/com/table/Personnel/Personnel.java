@@ -18,7 +18,8 @@ public class Personnel {
 	private String name;
 	private String password;
 	private int PositionTypeid;// 職務PositionTypeid
-	private int permissions;// 權限
+	public String strPosition;
+	private int[] permissions;// 權限   如: 剛創建=0 最低  一般員工=1~3  會計(帳務操作)4   出納5
 	private String nationality;// 國籍
 	private Date birthday;
 	private int gender;// 性別
@@ -77,11 +78,11 @@ public class Personnel {
 		PositionTypeid = positionTypeid;
 	}
 
-	public int getPermissions() {
+	public int[] getPermissions() {
 		return permissions;
 	}
 
-	public void setPermissions(int permissions) {
+	public void setPermissions(int[] permissions) {
 		this.permissions = permissions;
 	}
 

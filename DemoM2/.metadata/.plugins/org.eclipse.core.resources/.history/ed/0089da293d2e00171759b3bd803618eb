@@ -1,0 +1,14 @@
+package com.table.OrderContentId;
+
+import java.sql.Date;
+
+public class OrderContentId {
+
+	public int id;
+	public int clientId;// 客戶編號
+	public int orderContentId; // 訂單內容編號
+	private Date createDate;// 創建時間
+	private Date shipmentDate;// 出貨時間
+	private String note;// 備註
+	private int status;// 狀態 剛建立0 出貨1 未收款2 完成10
+}

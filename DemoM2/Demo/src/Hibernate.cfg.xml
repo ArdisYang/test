@@ -20,12 +20,15 @@
 		<!-- 資料庫使用者 -->
 		<property name="connection.username">sa</property>
 		<!-- 資料庫密碼 -->
-		<property name="connection.password">intumit</property>
+		<property name="connection.password">2088</property>
 
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- 以下設置物件與資料庫表格映射文件 -->
 		<mapping class="com.table.Personnel.Personnel" />
 		<mapping class="com.table.Client.Client" />
+		<mapping class="com.table.Personnel.PositionType" />
+		<mapping class="com.table.Order.Order" />
+		<mapping class="com.table.OrderContent.OrderContent" />
 		
 	</session-factory>
 	
